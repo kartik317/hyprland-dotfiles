@@ -1,4 +1,4 @@
-# Hyprland Dotfiles 🚀
+# Hyprland Dotfiles
 
 A comprehensive configuration setup for **Hyprland** - a dynamic tiling Wayland window manager. This dotfiles repository includes configurations for various system utilities, terminal emulators, media players, and UI components to create a cohesive desktop environment.
 
@@ -60,26 +60,7 @@ Terminal-based music player client configuration.
 - **`style.css`** - Custom styling and layout
 
 #### `wlogout/` - Logout Menu
-Graphical logout/pow## 🐛 Troubleshooting
-
-### Wallust not generating colors
-```bash
-wallust run -p ~/.config/wallust/wallust.toml <image>
-```
-
-### Waybar not updating
-```bash
-pkill waybar && waybar &
-```
-
-### Kitty colors not changing
-Restart Kitty or reload with `kill -SIGUSR1 <kitty_pid>`.
-
-### Scripts not executable
-```bash
-chmod +x hypr/scripts/*.sh
-```
-er menu.
+Graphical logout/power menu.
 - **`layout`** - Menu button layout and icons
 - **`style.css`** - Logout menu styling
 
