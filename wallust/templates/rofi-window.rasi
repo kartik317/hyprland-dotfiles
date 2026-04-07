@@ -1,0 +1,11 @@
+window {
+    border: 2px solid;
+    border-color: {{color4}};
+}
+element selected.normal {
+    border-color: {{color4}};
+}
+element selected.active {
+    border-color: {{color4}};
+}
+

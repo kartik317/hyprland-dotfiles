@@ -1,0 +1,72 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "display": {
+    "key": {
+      "width": 10
+    },
+    "separator": ""
+  },
+  "logo": {
+    "type": "auto",
+    "source": "~/.config/fastfetch/assets/ascii.txt",
+      "padding": {
+      "top": 0,
+      "left": 1
+    }
+  },
+  "modules": [
+    "break",
+    "break",
+    {
+      "type": "command",
+      "key": "󰀄 USER",
+      "text": "echo $USER@$(hostnamectl hostname)"
+    },
+    {
+      "type": "os",
+      "key": "󰣇 OS",
+      "format": "{name} {version-id}"
+    },
+    {
+      "type": "command",
+      "key": "󰌽 KER",
+      "text": "echo $(uname -r | cut -d- -f1) $(uname -m)"
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 PKG",
+      "format": "{all}"
+    },
+    {
+      "type": "terminal",
+      "key": "󰆍 TERM",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "shell",
+      "key": "󰞷 SH",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "uptime",
+      "key": "󰥔 UP"
+    },
+    {
+      "type": "memory",
+      "key": "󰍛 RAM",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "folders": "/",
+      "key": "󰋊 SSD",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m \u001b[91m \u001b[92m \u001b[93m \u001b[94m \u001b[95m \u001b[96m \u001b[97m "
+    },
+    "break"
+  ]
+}
+

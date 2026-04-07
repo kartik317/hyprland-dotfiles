@@ -1,0 +1,55 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/media"],
+  "modules-right": ["network", "pulseaudio", "backlight", "battery", "clock"],
+  "clock": {
+    "format": "<span foreground='#ffffff'>  </span>{:%a %d %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "<span size='13000' foreground='#ffffff'>{icon} </span> {capacity}%",
+    "format-warning": "<span size='13000' foreground='#ffcc66'>{icon} </span> {capacity}%",
+    "format-critical": "<span size='13000' foreground='#ff6666'>{icon} </span> {capacity}%",
+    "format-charging": "<span size='13000' foreground='#ffffff'> </span>{capacity}%",
+    "format-plugged": "<span size='13000' foreground='#ffffff'> </span>{capacity}%",
+    "format-alt": "<span size='13000' foreground='#ffffff'>{icon} </span> {time}",
+    "format-full": "<span size='13000' foreground='#ffffff'>  </span>{capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "<span size='13000' foreground='#ffffff'>  </span>{essid}",
+    "format-ethernet": "<span size='13000' foreground='#ffffff'>󰤭  </span> Disconnected",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span size='13000' foreground='#ffffff'>  </span>Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+  },
+  "pulseaudio": {
+      "format": "{icon}  {volume}%",
+      "format-muted": " ",
+      "format-icons": {
+          "default": ["", " ", " "]
+      },
+      "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "<span size='13000' foreground='#ffffff'>  </span>{percent}%",
+    "tooltip-format": "Brightness: {percent}%"
+  },
+  "custom/media": {
+    "format": "  {}",
+    "exec": "playerctl metadata --format '{{ artist }} - {{ title }}' 2>/dev/null",
+    "on-click": "playerctl play-pause 2>/dev/null",
+    "on-scroll-up": "playerctl next 2>/dev/null",
+    "on-scroll-down": "playerctl previous 2>/dev/null",
+    "interval": 2
+  }
+}
+
