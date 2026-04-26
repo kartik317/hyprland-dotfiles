@@ -1,19 +1,25 @@
 # Hyprland Dotfiles
 
-A comprehensive configuration setup for **Hyprland** - a dynamic tiling Wayland window manager. This dotfiles repository includes configurations for various system utilities, terminal emulators, media players, and UI components to create a cohesive desktop environment.
-
 ## 📁 Directory Structure
 
 ### Core Components
 
 #### `hypr/` - Hyprland Window Manager
 Main Hyprland configuration files and scripts.
-- **`hyprland.conf`** - Primary Hyprland configuration (keybindings, workspaces, appearance)
+- **`hyprland.conf`** - Primary Hyprland configuration
+- **`modules/`** conf for hyprland
+  - `animations.conf` - Hyprland animation
+  - `autostart.conf` - exec-once
+  - `keybinds.conf` - All the hyprland keybind
+  - `windowrules.conf` - All hyprland window rules
 - **`hyprlock.conf`** - Login/lock screen configuration
 - **`hyprpaper.conf`** - Wallpaper configuration
 - **`scripts/`** - Utility scripts
   - `toggle-glava.sh` - Toggle GLava (audio visualizer) on/off
   - `wallpaper-yazi.sh` - Wallpaper selection via Yazi file manager
+  - `live-wallpaper-yazi.sh` - Live wallpaper selection via Yazi
+  - `restore-wallpaper.sh` - Restore wallpaper from chache on re-boot
+  - `toggle-cava-bg.sh` Toggle CavaBG (audio visualizer in background) on/off
 
 #### `hyprpaper/` - Hyprpaper Configuration
 Dedicated wallpaper daemon configuration.
@@ -25,8 +31,9 @@ Directory for active wallpaper files.
 - `hyprMain.jpg` - Main desktop wallpaper
 
 #### `All_Wallpapers/` - Wallpaper Collection
-Comprehensive wallpaper library organized by theme.
 - **`one_piece/`** - One Piece anime wallpapers
+
+### `LiveWallpapers/` - Live wallapper collection
 
 ---
 
@@ -75,7 +82,6 @@ Fast application launcher and window switcher.
 #### `wallust/` - Wallpaper-based Colorscheme Generation
 Dynamic color palette generation from wallpapers using Wallust.
 - **`wallust.toml`** - Wallust configuration
-- **`post-process.sh`** - Post-processing script for color generation
 - **`templates/`** - Template files for generating configs with color schemes
   - `hyprland` - Hyprland color template
   - `kitty` - Kitty color template
@@ -90,7 +96,7 @@ Dynamic color palette generation from wallpapers using Wallust.
 ### System Information
 
 #### `fastfetch/` - System Information Display
-Fast system info fetcher (like neofetch but faster).
+Fast system info fetcher (like neovisfetch but faster).
 - **`config.jsonc`** - Main fastfetch configuration
 - **`config_zerotwo.jsonc`** - Zero Two theme variant
 - **`config_zerotwo1.jsonc`** - Alternative Zero Two variant
@@ -107,6 +113,7 @@ Ensure you have installed:
 - **Hyprland** - Window manager
 - **Hyprlock** - Lock screen
 - **Hyprpaper** - Wallpaper daemon
+- **MPVpaper** - Live wallpaper
 - **Kitty** - Terminal emulator
 - **Waybar** - Status bar
 - **rofi** - application launcher
@@ -116,6 +123,9 @@ Ensure you have installed:
 - **Wallust** - Colorscheme generator
 - **Fastfetch** - System info tool
 - **Yazi** - TUI file manager (for wallpaper script)
+- **cava** Audio visualizer
+- **cava-bg** Audio visualizer in background
+
 
 ### Installation
 
@@ -152,15 +162,16 @@ ln -sf ~/.config/hypr-dotfiles/wallust ~/.config/wallust
 # Fastfetch
 ln -sf ~/.config/hypr-dotfiles/fastfetch ~/.config/fastfetch
 ```
-Note: put all the wallpapers from `All_Wallpapers` to Picture/Wallpapers to match the path in `hypr/scripts/wallpaper-yazi.sh`
+Note: put all the wallpapers from `All_Wallpapers` to `Picture/Wallpapers` to match the path in `hypr/scripts/wallpaper-yazi.sh`
+      same for live wallpaper from `LiveWallpapers` to `Video/LiveWallpapers` to match the path in `hypr/script/live-wallpaper-yazi.sh`
 
 ## 🔧 Key Features
 
-✅ **Dynamic Wallpaper & Color Sync** - Wallust auto-generates themes from wallpapers  
-✅ **Modern Wayland Setup** - Optimized for Hyprland  
+✅ **Dynamic Wallpaper & Color Sync** - Wallust auto-generates themes from wallpapers 
+✅ **Dynamic Live Wallpaper & Color Sync** - Wallust auto-generates themes from first frame of wallpapers   
 ✅ **Modular Structure** - Easy to customize each component  
 ✅ **Music Integration** - MPD + Ncmpcpp for audio management  
-✅ **Fast System Info** - Fastfetch with anime themes  
+✅ **Fast System Info** - Fastfetch with ascii art  
 ✅ **Status Bar** - Full-featured Waybar configuration  
 ✅ **Utility Scripts** - Shell scripts for common tasks  
 
@@ -169,7 +180,7 @@ Note: put all the wallpapers from `All_Wallpapers` to Picture/Wallpapers to matc
 ## 📝 Customization
 
 ### Modify Keybindings
-Edit `hypr/hyprland.conf` for Hyprland shortcuts.
+Edit `hypr/modules/keybinds.conf` for Hyprland shortcuts.
 
 ### Change Terminal Style
 Adjust `kitty/kitty.conf` and `kitty/colors.conf`.
@@ -177,8 +188,6 @@ Adjust `kitty/kitty.conf` and `kitty/colors.conf`.
 ### Custom Waybar Modules
 Edit `waybar/config.jsonc` and `waybar/style.css`.
 
-### Add New Wallpapers
-Place images in `All_Wallpapers/` and run Wallust to regenerate colors.
 
 ---
 
@@ -189,6 +198,9 @@ Place images in `All_Wallpapers/` and run Wallust to regenerate colors.
 - [Wallust Repository](https://github.com/colorgen/wallust)
 - [Kitty Documentation](https://sw.kovidgoyal.net/kitty/)
 - [MPD & Ncmpcpp Setup](https://wiki.archlinux.org/title/Music_Player_Daemon)
+- [Yazi](https://yazi-rs.github.io/)
+- [cava](https://github.com/karlstav/cava)
+- [cava-bg](https://github.com/leriart/cava-bg)
 
 ---
 
@@ -198,4 +210,4 @@ Feel free to use, modify, and distribute these dotfiles.
 
 ---
 
-**Happy ricing!** 🎨✨
+**Happy ricing!**
