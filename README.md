@@ -44,6 +44,28 @@ Directory for active wallpaper files.
 - **`colors.conf`** - Color scheme configuration
 - **`colors-kitty.conf`** - Kitty-specific color overrides
 
+#### `nvim/` - Neovim Text Editor
+Modern Neovim configuration with LSP, completion, and plugin management.
+- **`init.lua`** - Main Neovim entry point and initialization
+- **`lazy-lock.json`** - Locked versions of lazy.nvim plugins
+- **`lua/`** - Lua configuration modules
+  - `vim-options.lua` - Core Vim settings and options
+  - `config/` - Plugin configurations
+    - `lazy.lua` - Lazy.nvim plugin manager setup
+    - `lsp.lua` - Language Server Protocol configuration
+    - `mason.lua` - LSP installer and manager
+    - `mason-lspconfig.lua` - Mason LSP configuration bridge
+    - `mason-tools.lua` - DAP and tool installations
+    - `cmp.lua` - Completion engine configuration
+    - `telescope.lua` - Fuzzy finder setup
+    - `treesitter.lua` - Syntax highlighting and parsing
+    - `neotree.lua` - File explorer configuration
+    - `lualine.lua` - Status line configuration
+    - `keymaps.lua` - Custom key bindings
+    - `none-ls.lua` - Null-ls (formatting and diagnostics)
+  - `plugins/` - Plugin specifications
+    - `init.lua` - Plugin list and specifications
+
 ---
 
 ### Media Management
@@ -115,6 +137,7 @@ Ensure you have installed:
 - **Hyprpaper** - Wallpaper daemon
 - **MPVpaper** - Live wallpaper
 - **Kitty** - Terminal emulator
+- **neovim** - Text editor
 - **Waybar** - Status bar
 - **rofi** - application launcher
 - **wlogout** - Logout menu
@@ -138,32 +161,35 @@ cd ~/.config/hypr-dotfiles
 #### Symlink configurations:
 ```bash
 # Hyprland
-ln -sf ~/.config/hypr-dotfiles/hypr ~/.config/hypr
+ln -sf ~/.config/hyprland-dotfiles/hypr ~/.config/hypr
 
 # Kitty
-ln -sf ~/.config/hypr-dotfiles/kitty ~/.config/kitty
+ln -sf ~/.config/hyprland-dotfiles/kitty ~/.config/kitty
+
+#neovim
+ln -sf ~/.config/hyprland-dotfiles/nvim ~/.config/nvim
 
 # Waybar
-ln -sf ~/.config/hypr-dotfiles/waybar ~/.config/waybar
+ln -sf ~/.config/hyprland-dotfiles/waybar ~/.config/waybar
 
 # Wlogout
-ln -sf ~/.config/hypr-dotfiles/wlogout ~/.config/wlogout
+ln -sf ~/.config/hyprland-dotfiles/wlogout ~/.config/wlogout
 
 # Rofi
-ln -sf ~/.config/hypr-dotfiles/rofi ~/.config/rofi
+ln -sf ~/.config/hyprland-dotfiles/rofi ~/.config/rofi
 
 # Music
-ln -sf ~/.config/hypr-dotfiles/mpd ~/.config/mpd
-ln -sf ~/.config/hypr-dotfiles/ncmpcpp ~/.config/ncmpcpp
+ln -sf ~/.config/hyprland-dotfiles/mpd ~/.config/mpd
+ln -sf ~/.config/hyprland-dotfiles/ncmpcpp ~/.config/ncmpcpp
 
 # Wallust
-ln -sf ~/.config/hypr-dotfiles/wallust ~/.config/wallust
+ln -sf ~/.config/hyprland-dotfiles/wallust ~/.config/wallust
 
 # Fastfetch
-ln -sf ~/.config/hypr-dotfiles/fastfetch ~/.config/fastfetch
+ln -sf ~/.config/hyprland-dotfiles/fastfetch ~/.config/fastfetch
 ```
 Note: put all the wallpapers from `All_Wallpapers` to `Picture/Wallpapers` to match the path in `hypr/scripts/wallpaper-yazi.sh`
-      same for live wallpaper from `LiveWallpapers` to `Video/LiveWallpapers` to match the path in `hypr/script/live-wallpaper-yazi.sh`
+      for live wallpaper put your wallpapers in `Video/LiveWallpapers` to match the path in `hypr/script/live-wallpaper-yazi.sh` (repo doesn't include live wallpaper because of there file size)
 
 ## 🔧 Key Features
 
@@ -197,6 +223,7 @@ Edit `waybar/config.jsonc` and `waybar/style.css`.
 - [Waybar Documentation](https://github.com/Alexays/Waybar)
 - [Wallust Repository](https://github.com/colorgen/wallust)
 - [Kitty Documentation](https://sw.kovidgoyal.net/kitty/)
+- [Neovim](https://neovim.io/)
 - [MPD & Ncmpcpp Setup](https://wiki.archlinux.org/title/Music_Player_Daemon)
 - [Yazi](https://yazi-rs.github.io/)
 - [cava](https://github.com/karlstav/cava)
