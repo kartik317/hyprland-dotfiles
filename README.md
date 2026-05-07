@@ -1,6 +1,6 @@
 # Hyprland Dotfiles
 
-<iframe width="560" height="315" src="https://youtu.be/8hfpRXW6VIE?si=MwkpPekX7qP4oQfx" frameborder="0" allowfullscreen></iframe>   
+[![FUll RICE VIDEO](https://kommodo.ai/i/odgn2uNQDDExwIKpqq0x)](https://youtu.be/8hfpRXW6VIE?si=MwkpPekX7qP4oQfx)    
 
 ## 📁 Directory Structure
 
