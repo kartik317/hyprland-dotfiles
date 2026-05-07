@@ -1,6 +1,6 @@
 # Hyprland Dotfiles
 
-[![FUll RICE VIDEO](https://kommodo.ai/i/odgn2uNQDDExwIKpqq0x)](https://youtu.be/8hfpRXW6VIE?si=MwkpPekX7qP4oQfx)    
+[![FUll RICE VIDEO](https://i.postimg.cc/k55m7nsp/niwiebfir-Photoroom-Picsart-Ai-Image-Enhancer.png)](https://youtu.be/8hfpRXW6VIE?si=MwkpPekX7qP4oQfx)    
 
 ## 📁 Directory Structure
 
