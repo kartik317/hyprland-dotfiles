@@ -156,8 +156,8 @@ Ensure you have installed:
 
 #### Clone the repository:
 ```bash
-git clone https://github.com/kartik317/hyprland-dotfiles ~/.config/hypr-dotfiles
-cd ~/.config/hypr-dotfiles
+git clone https://github.com/kartik317/hyprland-dotfiles ~/.config/hyprland-dotfiles
+cd ~/.config/hyprland-dotfiles
 ```
 
 #### Symlink configurations:
