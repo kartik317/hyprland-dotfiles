@@ -28,8 +28,7 @@ if [ -f /tmp/wallpaper.txt ]; then
     sleep 0.2
 
     # start video wallpaper
-    hyprctl dispatch exec "mpvpaper -o 'no-audio loop hwdec=auto vo=gpu --profile=fast' '*' '$wallpaper'"
-
+    mpvpaper -o "no-audio loop hwdec=auto vo=gpu --profile=fast" "*" "$wallpaper" &
     # generate colors from frame
     wallust run "$temp_img"
 

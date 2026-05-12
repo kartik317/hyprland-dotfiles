@@ -13,8 +13,7 @@ if [[ "$type" == "video" ]]; then
 
     pkill -x hyprpaper 2>/dev/null
     sleep 0.2
-
-    hyprctl dispatch exec "mpvpaper -o 'no-audio loop hwdec=auto vo=gpu --profile=fast' '*' '$wallpaper'"
+    mpvpaper -o "no-audio loop hwdec=auto vo=gpu --profile=fast" "*" "$wallpaper" &
 else
     pkill -x mpvpaper 2>/dev/null
 

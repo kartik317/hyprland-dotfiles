@@ -46,5 +46,5 @@ palette = "dark"
 # zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 kitty = { template = "kitty", target = "~/.config/wallust/colors-kitty.conf", pywal = true }
 #waybar = { template = 'waybar', target = '~/.config/wallust/colors-waybar.css', pywal = false }
-hyprland = { template = "hyprland", target = "~/.config/wallust/hyprland.conf" }
+hyprland = { template = "hyprland", target = "~/.config/wallust/hyprland.lua" }
 rofi = { template = "rofi-window.rasi", target = "~/.config/wallust/rofi-window.rasi" }
