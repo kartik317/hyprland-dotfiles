@@ -21,8 +21,9 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
-hl.bind("SUPER + W", hl.dsp.exec_cmd(terminal .. " -e ~/.config/hypr/scripts/wallpaper-yazi.sh"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(terminal .. " -e ~/.config/hypr/scripts/wallpaper-yazi.sh"))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(terminal .. " -e ~/.config/hypr/scripts/live-wallpaper-yazi.sh"))
+hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(terminal .. " -e yazi"))
 hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.exec_cmd("copyq toggle"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
@@ -33,6 +34,7 @@ hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("blueman-manager"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("wlogout"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-cava-bg.sh"))
 hl.bind("CTRL + M", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-glava.sh"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

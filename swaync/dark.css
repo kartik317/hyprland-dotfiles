@@ -1,0 +1,241 @@
+@define-color dark #24283b;
+@define-color darkOP rgba(36,40,59,0.3);
+@define-color darkOP2 rgba(36,40,59,0.5);
+@define-color light #c0caf5;
+@define-color lightOP rgba(192, 202, 245,0.3);
+@define-color lightOP2 rgba(192, 202, 245,0.7);
+@define-color lightCursor #bbbbbb;
+@define-color dark2 #2e3c64;
+@define-color light2 #a9b1d6;
+@define-color gray #60626D;
+@define-color red #f7768e;
+@define-color redOP rgba(247,118,142,0.7);
+@define-color green #9ece6a;
+@define-color greenOP #9ece6a77;
+@define-color yellow #e0af68;
+@define-color purple #7aa2f7;
+@define-color pink #bb9af7;
+@define-color pink2 #c7a9ff;
+@define-color blue #7dcfff;
+
+* {
+    all: unset;
+    font-size: 14px;
+    font-family: "Inter Display", "RobotoMono Nerd Font Propo";
+    transition: 200ms;
+}
+
+/* notifications */
+.notification-background {
+    border-radius: 12.6px;
+    border: 4px solid @lightOP;
+    margin: 8px;
+    background: @darkOP;
+    padding: 0;
+}
+
+.notification image {
+    margin-right: 10px;
+    -gtk-icon-size: 5rem;
+}
+
+.notification-background .notification {
+    padding: 7px;
+    /* border-radius: 12.6px; */
+}
+
+.notification .notification-content {
+    margin: 7px;
+}
+
+.notification .notification-content overlay {
+    /* icons */
+    margin: 4px;
+}
+
+.notification-content .summary {
+    color: @light;
+}
+
+.notification-content .time {
+    color: @lightOP;
+}
+
+.notification-content .body {
+    color: @lightOP2;
+}
+
+.notification > *:last-child > * {
+    min-height: 3.4em;
+}
+
+.notification-background .close-button {
+    margin: 2px;
+    padding: 2px;
+    border-radius: 50px;
+    color: @darkOP2;
+    background-color: @red;
+}
+
+.notification .notification-action {
+    border-radius: 999px;
+    color: @dark;
+    margin: 4px;
+    padding: 8px;
+    font-size: 0.2rem; /* controls the button size not text size*/
+    background-color: @lightOP;
+}
+
+.notification .notification-action:hover {
+    background-color: @lightOP2;
+}
+
+.notification .notification-action:active {
+    background-color: @light;
+}
+
+.notification.critical {
+    box-shadow: inset 0px 0px 10px 0px @red;
+    border-radius: 7px;
+}
+
+/* control center */
+.control-center {
+    border: 4px solid @lightOP;
+    background-color: @darkOP;
+    color: @light;
+    padding: 14px;
+    border-radius: 12.6px;
+}
+
+.control-center .notification-background {
+    /* border-radius: 7px; */
+    margin: 4px 10px;
+}
+
+.control-center .notification-background .notification {
+    /* border-radius: 7px; */
+}
+
+.control-center .notification-background .notification.low {
+    opacity: 0.8;
+}
+
+.control-center .widget-title > label {
+    font-size: 1.3em;
+    color: @light;
+    padding: 8px;
+    border-radius: 999px;
+}
+
+.control-center .widget-title button label {
+    /*border-radius: 999px;*/
+    color: @light;
+    /*background-color: @lightOP;*/
+    padding: 8px;
+    font-size: 1.5rem;
+}
+.control-center .widget-title > button label:hover {
+    color: @redOP;
+}
+
+.notification-content .time {
+    margin: 7px;
+}
+
+.control-center .notification-group {
+    margin-top: 10px;
+}
+
+.control-center .notification-group-headers {
+    margin: 10px 20px 20px 10px;
+    padding: 8px;
+    color: @light;
+    border-radius: 999px;
+}
+
+.control-center .notification-group .notification-group-buttons {
+    margin: 10px 20px 20px 10px;
+}
+.control-center .notification-group .notification-group-buttons > :first-child {
+    margin: 0px;
+    padding: 8px;
+    border-radius: 999px;
+    color: @light;
+}
+
+.control-center
+    .notification-group
+    .notification-group-buttons
+    > :first-child:hover {
+    color: @purple;
+}
+.control-center
+    .notification-group
+    .notification-group-buttons
+    > :nth-child(2) {
+    margin: 0px;
+    padding: 4px;
+    border-radius: 50px;
+    color: @light;
+    /*background-color: @red;*/
+}
+.control-center
+    .notification-group
+    .notification-group-buttons
+    > :nth-child(2):hover {
+    color: @red;
+}
+
+.control-center .notification-group .notification-background {
+    background-color: @dark;
+}
+
+.control-center .notification-group .notification-group-close-button {
+    margin: 2px;
+    padding: 2px;
+    border-radius: dwaita is 50px;
+    color: @darkOP2;
+    background-color: @red;
+}
+
+/* title - notifications */
+
+.widget-title {
+    margin-bottom: 10px;
+}
+.control-center .widget-title label {
+    color: @light;
+}
+
+/* dnd */
+.widget-dnd {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-radius: 999px;
+    font-size: 1.1rem;
+}
+.widget-dnd label {
+    color: @light;
+    padding: 8px;
+    border-radius: 999px;
+}
+
+.widget-dnd > switch {
+    font-size: 0.5rem;
+    border-radius: 999px;
+    background: @lightOP;
+    box-shadow: none;
+    outline: 3px solid @lightOP;
+    margin-right: 10px;
+}
+
+.widget-dnd > switch:checked {
+    background: @lightOP;
+    /*background-color: transparent;*/
+}
+
+.widget-dnd > switch slider {
+    background: @light;
+    border-radius: 999px;
+}

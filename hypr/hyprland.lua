@@ -3,6 +3,7 @@ require("modules.keybinds")
 require("modules.monitor")
 require("modules.animations")
 require("modules.windowrules")
+require("modules.layerrules")
 
 -- to change border color with wallust
 dofile(os.getenv("HOME") .. "/.config/wallust/hyprland.lua")
@@ -12,6 +13,13 @@ dofile(os.getenv("HOME") .. "/.config/wallust/hyprland.lua")
 -------------------------------
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
+
+hl.config({
+    xwayland = {
+        force_zero_scaling = true,
+        use_nearest_neighbor = true,
+    }
+})
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")

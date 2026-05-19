@@ -1,0 +1,100 @@
+@define-color dark #24283b;
+@define-color darkOP rgba(36,40,59,0.3);
+@define-color darkOP2 rgba(36,40,59,0.5);
+@define-color light #c0caf5;
+@define-color lightOP rgba(192, 202, 245,0.3);
+@define-color lightOP2 rgba(192, 202, 245,0.7);
+@define-color lightCursor #bbbbbb;
+@define-color dark2 #2e3c64;
+@define-color light2 #a9b1d6;
+@define-color gray #60626D;
+@define-color red #f7768e;
+@define-color redOP rgba(247,118,142,0.7);
+@define-color green #9ece6a;
+@define-color yellow #e0af68;
+@define-color purple #7aa2f7;
+@define-color pink #bb9af7;
+@define-color pink2 #c7a9ff;
+@define-color blue #7dcfff;
+
+.widget-mpris {
+    /*border-radius: 999px;*/
+    padding: 10px;
+    /* margin-bottom: 20px; */
+    /* background-color: @base; */
+}
+
+.widget-mpris carouselindicatordots {
+    color: @light;
+}
+.widget-mpris-player {
+    margin: 10px;
+    border-radius: 12px;
+    /* background-color: @base; */
+    border: 4px solid @lightOP;
+}
+.widget-mpris-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: @light;
+    padding: 8px;
+    margin-right: 12px;
+    border-radius: 999px;
+}
+.widget-mpris-subtitle {
+    color: @lightOP2;
+    padding: 8px;
+    margin-right: 12px;
+    border-radius: 999px;
+}
+.widget-mpris button:disabled {
+    opacity: 0.6;
+    filter: grayscale(1);
+}
+.widget-mpris button {
+    /* color: red; */
+    /* border: 2px solid red; */
+}
+.widget-mpris button image {
+    -gtk-icon-size: 1rem;
+    /*color: transparent;*/
+}
+
+.widget-mpris-player image {
+    -gtk-icon-size: 100px;
+    border-radius: 12.6px;
+    margin: 10px 0 0 10px;
+    /* border: 2px solid #cba6f7; */
+}
+
+.widget-mpris-player button image {
+    -gtk-icon-size: 2rem;
+    /* color: @foreground; */
+    color: @light;
+    border-radius: 50px;
+    /*background-color: #11111b;*/
+    /*padding: 10px;*/
+    margin: 0 20px 20px 20px;
+    border: none;
+}
+.widget-mpris-player button image:hover {
+    color: @purple;
+    /*padding: 10px;*/
+    /*margin-bottom: 10px;*/
+    border: none;
+}
+.mpris-background {
+    opacity: 0.1;
+    filter: blur(5px);
+}
+
+picture.mpris-overlay {
+    /* background-color: @base; */
+    opacity: 1;
+}
+
+.widget-mpris-album-art {
+    background-color: @lightOP;
+    opacity: 0.5;
+    /* box-shadow: 0px 0px 50px 3px @color4; */
+}

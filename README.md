@@ -46,6 +46,12 @@ Directory for active wallpaper files.
 - **`colors.conf`** - Color scheme configuration
 - **`colors-kitty.conf`** - Kitty-specific color overrides
 
+### `swaync/` - notification
+- **`config.json`** - Main configuration
+- **`dark.css`**
+- **`mpris.css`**
+- **`style.css`** - Main style sheet
+
 #### `nvim/` - Neovim Text Editor
 Modern Neovim configuration with LSP, completion, and plugin management.
 - **`init.lua`** - Main Neovim entry point and initialization
@@ -142,6 +148,8 @@ Ensure you have installed:
 - **neovim** - Text editor
 - **Waybar** - Status bar
 - **rofi** - application launcher
+- **wofi-emoji** - emoji launcher
+- **swaync** - notification 
 - **wlogout** - Logout menu
 - **MPD** - Music Player Daemon
 - **Ncmpcpp** - MPD client
@@ -187,6 +195,9 @@ ln -sf ~/.config/hyprland-dotfiles/ncmpcpp ~/.config/ncmpcpp
 # Wallust
 ln -sf ~/.config/hyprland-dotfiles/wallust ~/.config/wallust
 
+# Swaync
+ln -sf ~/.config/hyprland-dotfiles/swaync ~/.config/swaync
+
 # Fastfetch
 ln -sf ~/.config/hyprland-dotfiles/fastfetch ~/.config/fastfetch
 ```
@@ -205,20 +216,6 @@ Note: put all the wallpapers from `All_Wallpapers` to `Picture/Wallpapers` to ma
 
 ---
 
-## 📝 Customization
-
-### Modify Keybindings
-Edit `hypr/modules/keybinds.conf` for Hyprland shortcuts.
-
-### Change Terminal Style
-Adjust `kitty/kitty.conf` and `kitty/colors.conf`.
-
-### Custom Waybar Modules
-Edit `waybar/config.jsonc` and `waybar/style.css`.
-
-
----
-
 ## 📚 Resources
 
 - [Hyprland Wiki](https://wiki.hyprland.org)
@@ -227,6 +224,9 @@ Edit `waybar/config.jsonc` and `waybar/style.css`.
 - [Kitty Documentation](https://sw.kovidgoyal.net/kitty/)
 - [Neovim](https://neovim.io/)
 - [MPD & Ncmpcpp Setup](https://wiki.archlinux.org/title/Music_Player_Daemon)
+- [Swaync](https://github.com/ErikReider/SwayNotificationCenter)
+- [Rofi](https://github.com/davatorium/rofi)
+- [Wofi](https://github.com/SimplyCEO/wofi)
 - [Yazi](https://yazi-rs.github.io/)
 - [cava](https://github.com/karlstav/cava)
 - [cava-bg](https://github.com/leriart/cava-bg)

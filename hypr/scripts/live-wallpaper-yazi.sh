@@ -28,7 +28,8 @@ if [ -f /tmp/wallpaper.txt ]; then
     sleep 0.2
 
     # start video wallpaper
-    mpvpaper -o "no-audio loop hwdec=auto vo=gpu --profile=fast" "*" "$wallpaper" &
+    nohup mpvpaper -o "no-audio loop hwdec=auto vo=gpu --profile=fast" "*" "$wallpaper" >/dev/null 2>&1 &
+disown
     # generate colors from frame
     wallust run "$temp_img"
 
@@ -41,3 +42,4 @@ if [ -f /tmp/wallpaper.txt ]; then
     pkill -SIGUSR2 waybar
     rm /tmp/wallpaper.txt
 fi
+kill $PPID

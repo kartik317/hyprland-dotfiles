@@ -47,8 +47,28 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "proton_opacity",
+    match = { class = "proton.vpn.app.gtk" },
+    opacity = "0.8 0.7"
+})
+
+hl.window_rule({
     name = "brave_opacity",
     match = { class = "brave-browser" },
+    opacity = "0.85 0.8"
+})
+
+hl.window_rule({
+    name = "telegram_float",
+    match = { class = "org.telegram.desktop" },
+    float = true,
+    size = {800, 500},
+    opacity = "0.7 0.6"
+})
+
+hl.window_rule({
+    name = "vscode_opacity",
+    match = { class = "code" },
     opacity = "0.85 0.8"
 })
 
