@@ -12,24 +12,38 @@ if [ -f /tmp/wallpaper.txt ]; then
 
     temp_img="/tmp/wallpaper_frame.png"
 
-    # extract frame if video
-    if [[ "$ext" == "mp4" || "$ext" == "webm" || "$ext" == "mkv" ]]; then
-        ffmpeg -y -i "$wallpaper" -frames:v 1 "$temp_img" >/dev/null 2>&1
-        awww img "$temp_img" --transition-type grow --transition-duration 0.8
-    else
-        # fallback (shouldn't happen here)
-        awww img "$wallpaper" --transition-type grow --transition-duration 0.8
-    fi
-
-    # kill previous wallpaper engines
+    # kill previous wallpaper engines before transition
     pkill -x mpvpaper 2>/dev/null
     pkill -x hyprpaper 2>/dev/null
 
-    sleep 0.2
+    # extract frame if video and play transition
+    if [[ "$ext" == "mp4" || "$ext" == "webm" || "$ext" == "mkv" ]]; then
+        ffmpeg -y -i "$wallpaper" -frames:v 1 "$temp_img" >/dev/null 2>&1
+        awww img "$temp_img" \
+            --transition-type wave \
+            --transition-angle 180 \
+            --transition-wave 80,40 \
+            --transition-duration 2.5 \
+            --transition-fps 60 \
+            --transition-bezier 0.65,0.05,0.36,1
+    else
+        # fallback (shouldn't happen here)
+        awww img "$wallpaper" \
+            --transition-type wave \
+            --transition-angle 180 \
+            --transition-wave 80,40 \
+            --transition-duration 2.5 \
+            --transition-fps 60 \
+            --transition-bezier 0.65,0.05,0.36,1
+    fi
+
+    # wait for transition to fully finish before mpvpaper takes over
+    sleep 2.8
 
     # start video wallpaper
     nohup mpvpaper -o "no-audio loop hwdec=auto vo=gpu --profile=fast" "*" "$wallpaper" >/dev/null 2>&1 &
-disown
+    disown
+
     # generate colors from frame
     wallust run "$temp_img"
 

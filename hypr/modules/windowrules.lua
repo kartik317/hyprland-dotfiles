@@ -39,6 +39,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "discord_opacity",
+    match = { class = "discord" },
+    opacity = "0.8 0.75"
+})
+
+hl.window_rule({
     name = "terminal_float",
     match = { class = "kitty" },
     float = true,
