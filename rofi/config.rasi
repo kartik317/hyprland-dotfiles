@@ -1,4 +1,4 @@
-@import "~/.config/wallust/rofi-window.rasi"
+@import "~/.config/rofi/rofi-window.rasi"
 
 * {
     font: "Figtree 13";

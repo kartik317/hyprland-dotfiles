@@ -6,7 +6,7 @@ require("modules.windowrules")
 require("modules.layerrules")
 
 -- to change border color with wallust
-dofile(os.getenv("HOME") .. "/.config/wallust/hyprland.lua")
+require("hyprland-border")
 
 -------------------------------
 ---- ENVIRONMENT VARIABLES ----

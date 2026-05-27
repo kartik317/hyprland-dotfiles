@@ -10,7 +10,7 @@ if [ -f /tmp/wallpaper.txt ]; then
     ext="${wallpaper##*.}"
     ext=$(echo "$ext" | tr '[:upper:]' '[:lower:]')
 
-    temp_img="/tmp/wallpaper_frame.png"
+    wallpaper_frame="$HOME/.cache/wallpaper_frame.png"
 
     # kill previous wallpaper engines before transition
     pkill -x mpvpaper 2>/dev/null
@@ -18,8 +18,8 @@ if [ -f /tmp/wallpaper.txt ]; then
 
     # extract frame if video and play transition
     if [[ "$ext" == "mp4" || "$ext" == "webm" || "$ext" == "mkv" ]]; then
-        ffmpeg -y -i "$wallpaper" -frames:v 1 "$temp_img" >/dev/null 2>&1
-        awww img "$temp_img" \
+        ffmpeg -y -i "$wallpaper" -frames:v 1 "$wallpaper_frame" >/dev/null 2>&1
+        awww img "$wallpaper_frame" \
             --transition-type wave \
             --transition-angle 180 \
             --transition-wave 80,40 \
@@ -45,10 +45,7 @@ if [ -f /tmp/wallpaper.txt ]; then
     disown
 
     # generate colors from frame
-    wallust run "$temp_img"
-
-    # cleanup
-    rm -f "$temp_img"
+    wallust run "$wallpaper_frame"
 
     echo "$wallpaper" > ~/.cache/current_wallpaper
     echo "video" > ~/.cache/current_wallpaper_type

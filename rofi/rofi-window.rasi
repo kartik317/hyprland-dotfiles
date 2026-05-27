@@ -1,11 +1,11 @@
 window {
     border: 2px solid;
-    border-color: #C79CBE;
+    border-color: #9C6A7A;
 }
 element selected.normal {
-    border-color: #C79CBE;
+    border-color: #9C6A7A;
 }
 element selected.active {
-    border-color: #C79CBE;
+    border-color: #9C6A7A;
 }
 

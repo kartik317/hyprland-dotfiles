@@ -22,6 +22,7 @@ if [ -f /tmp/wallpaper.txt ]; then
 
     echo "$wallpaper" > ~/.cache/current_wallpaper
     echo "image" > ~/.cache/current_wallpaper_type
+    cp "$wallpaper" ~/.cache/wallpaper_frame.png # saves it for hyprlock
 
     rm /tmp/wallpaper.txt
 fi

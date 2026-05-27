@@ -1,6 +1,6 @@
 # Hyprland Dotfiles
 
-[![FUll RICE VIDEO](https://i.postimg.cc/k55m7nsp/niwiebfir-Photoroom-Picsart-Ai-Image-Enhancer.png)](https://youtu.be/8hfpRXW6VIE?si=MwkpPekX7qP4oQfx)    
+[![FUll RICE VIDEO](https://i.imgur.com/KsYTuXM.jpeg)](https://youtu.be/-m2oMzcsQ8s?si=rjuPiolD61_72VCs)    
 
 ## 📁 Directory Structure
 
@@ -9,6 +9,7 @@
 #### `hypr/` - Hyprland Window Manager
 Main Hyprland configuration files and scripts.
 - **`hyprland.lua`** - Primary Hyprland configuration
+- **`hyprland-border.lua`** - Border colors generated via wallust
 - **`modules/`** conf for hyprland
   - `animations.lua` - Hyprland animation
   - `autostart.lua` - exec-once
@@ -43,8 +44,7 @@ Directory for active wallpaper files.
 
 #### `kitty/` - Kitty Terminal Emulator
 - **`kitty.conf`** - Terminal settings, fonts, keybindings
-- **`colors.conf`** - Color scheme configuration
-- **`colors-kitty.conf`** - Kitty-specific color overrides
+- **`colors-kitty.conf`** - Colors generated via wallust
 
 ### `swaync/` - notification
 - **`config.json`** - Main configuration
@@ -104,6 +104,7 @@ Graphical logout/power menu.
 #### `rofi/` - Application & Window Switcher
 Fast application launcher and window switcher.
 - **`config.rasi`** - Main Rofi configuration (theme, keybindings, appearance)
+- **`rofi-window.rasi`** - Colors generated via wallust
 
 ---
 
@@ -117,9 +118,6 @@ Dynamic color palette generation from wallpapers using Wallust.
   - `kitty` - Kitty color template
   - `rofi-window.rasi` - Rofi window switcher template
   - `waybar` - Waybar color template
-- **`colors-kitty.conf`** - Generated Kitty colors
-- **`hyprland.lua`** - Generated Hyprland colors
-- **`rofi-window.rasi`** - Generated Rofi configuration
 
 ---
 

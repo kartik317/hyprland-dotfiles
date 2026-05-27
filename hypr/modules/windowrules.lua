@@ -33,15 +33,35 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name = "obsidian_opacity",
+    match = { class = "obsidian" },
+    opacity = "0.8 0.75"
+})
+
+hl.window_rule({
     name = "thunar_opacity",
     match = { class = "thunar" },
     opacity = "0.75 0.7"
 })
 
 hl.window_rule({
+    name = "copyq_window",
+    match = { class = "com.github.hluk.copyq" },
+    opacity = "0.8 0.75",
+    float = true,
+    size = {500, 300}
+})
+
+hl.window_rule({
     name = "discord_opacity",
     match = { class = "discord" },
     opacity = "0.8 0.75"
+})
+
+hl.window_rule({
+    name = "warp_opacity",
+    match = { class = "dev.warp.Warp" },
+    opacity = "0.75 0.7"
 })
 
 hl.window_rule({

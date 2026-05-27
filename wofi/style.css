@@ -2,15 +2,15 @@
   all: unset;
   outline: none;
   border: none;
-  color: #becbae;;
+  color: #9e9e9e;
   font-family: "JetBrainsMono NF", monospace;
   font-size: 14px;
 }
 
 window {
   border-radius: 0.75em;
-  border: 1px solid #add28e;;
-  background-color: alpha(#11140e,.9);
+  border: 1px solid #9e9e9e;
+  background-color: alpha(#11140e,.8);
 }
 
 #outer-box {
@@ -20,7 +20,7 @@ window {
 #input {
   margin: 5px;
   padding: 5px 5px 5px 0px;
-  border: 1px solid #add28e;;
+  border: 1px solid #9e9e9e;
   border-radius: 0.5em;
 }
 
@@ -30,22 +30,22 @@ window {
 }
 
 #text {
-  color: #add28e;;
+  color: #9e9e9e;
 }
 
 #text:selected {
-  color: #add28e;;
+  color: #9e9e9e;
 }
 
 #entry {
   padding: 5px 5px 5px 10px;
   border-radius: 0.5em;
-  color: #add28e;;
+  color: #9e9e9e;
 }
 
 #entry:selected {
-  border: 1px solid #add28e;;
-  color: #add28e;;
+  border: 1px solid #9e9e9e;
+  color: #9e9e9e;
 }
 
 #inner-box flowboxchild:nth-child(even) {
