@@ -1,0 +1,20 @@
+/* Wallust generated colors for swaync */
+@define-color dark {{background}};
+@define-color darkOP #{{background | strip}}bf;
+@define-color darkOP2 #{{background | strip}}d9;
+@define-color light {{foreground}};
+@define-color lightOP #{{foreground | strip}}4d;
+@define-color lightOP2 #{{foreground | strip}}b3;
+@define-color lightCursor {{color7}};
+@define-color dark2 {{color8}};
+@define-color light2 {{color15}};
+@define-color gray {{color8}};
+@define-color red {{color1}};
+@define-color redOP #{{color1 | strip}}b3;
+@define-color green {{color2}};
+@define-color greenOP #{{color2 | strip}}77;
+@define-color yellow {{color3}};
+@define-color purple {{color4}};
+@define-color pink {{color5}};
+@define-color pink2 {{color13}};
+@define-color blue {{color6}};

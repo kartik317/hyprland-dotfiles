@@ -45,6 +45,7 @@ palette = "dark"
 # ¡ If either one is a directory, then both SHOULD be one. !
 # zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 kitty = { template = "kitty", target = "~/.config/kitty/colors-kitty.conf", pywal = true }
-#waybar = { template = 'waybar', target = '~/.config/waybar/colors-waybar.css', pywal = false }
 hyprland = { template = "hyprland", target = "~/.config/hypr/hyprland-border.lua" }
 rofi = { template = "rofi-window.rasi", target = "~/.config/rofi/rofi-window.rasi" }
+quickshell = { template = "quickshell-theme.qml", target = "~/.config/quickshell/theme/Colors.qml", pywal = false }
+swaync = { template = "swaync.css", target = "~/.config/swaync/colors-wallust.css", pywal = false }
