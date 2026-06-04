@@ -10,15 +10,14 @@ if [ -f /tmp/wallpaper.txt ]; then
     pkill -x mpvpaper 2>/dev/null
 
     awww img "$wallpaper" \
-    --transition-type wave \
-    --transition-angle 180 \
-    --transition-wave 80,40 \
+    --transition-type wipe \
+    --transition-angle 45 \
     --transition-duration 2.5 \
     --transition-fps 60 \
     --transition-bezier 0.65,0.05,0.36,1
 
     wallust run "$wallpaper"
-    pkill -SIGUSR2 waybar
+    pkill swaync
 
     echo "$wallpaper" > ~/.cache/current_wallpaper
     echo "image" > ~/.cache/current_wallpaper_type

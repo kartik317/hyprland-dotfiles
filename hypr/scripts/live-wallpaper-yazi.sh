@@ -20,18 +20,17 @@ if [ -f /tmp/wallpaper.txt ]; then
     if [[ "$ext" == "mp4" || "$ext" == "webm" || "$ext" == "mkv" ]]; then
         ffmpeg -y -i "$wallpaper" -frames:v 1 "$wallpaper_frame" >/dev/null 2>&1
         awww img "$wallpaper_frame" \
-            --transition-type wave \
-            --transition-angle 180 \
-            --transition-wave 80,40 \
+            --transition-type wipe \
+            --transition-angle 45 \
             --transition-duration 2.5 \
             --transition-fps 60 \
             --transition-bezier 0.65,0.05,0.36,1
+
     else
         # fallback (shouldn't happen here)
         awww img "$wallpaper" \
-            --transition-type wave \
-            --transition-angle 180 \
-            --transition-wave 80,40 \
+            --transition-type wipe \
+            --transition-angle 45 \
             --transition-duration 2.5 \
             --transition-fps 60 \
             --transition-bezier 0.65,0.05,0.36,1
@@ -50,7 +49,7 @@ if [ -f /tmp/wallpaper.txt ]; then
     echo "$wallpaper" > ~/.cache/current_wallpaper
     echo "video" > ~/.cache/current_wallpaper_type
 
-    pkill -SIGUSR2 waybar
+    pkill swaync
     rm /tmp/wallpaper.txt
 fi
 kill $PPID
