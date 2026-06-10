@@ -126,11 +126,8 @@ Dynamic color palette generation from wallpapers using Wallust.
 #### `fastfetch/` - System Information Display
 Fast system info fetcher (like neovisfetch but faster).
 - **`config.jsonc`** - Main fastfetch configuration
-- **`config_zerotwo.jsonc`** - Zero Two theme variant
-- **`config_zerotwo1.jsonc`** - Alternative Zero Two variant
 - **`assets/`** - ASCII art and images
   - `ascii.txt` - Custom ASCII art
-  - `zerotwo.png`, `zerotwo2.png` - Theme images
 
 ---
 
