@@ -53,26 +53,6 @@ Directory for active wallpaper files.
 - **`style.css`** - Main style sheet
 
 #### `nvim/` - Neovim Text Editor
-Modern Neovim configuration with LSP, completion, and plugin management.
-- **`init.lua`** - Main Neovim entry point and initialization
-- **`lazy-lock.json`** - Locked versions of lazy.nvim plugins
-- **`lua/`** - Lua configuration modules
-  - `vim-options.lua` - Core Vim settings and options
-  - `config/` - Plugin configurations
-    - `lazy.lua` - Lazy.nvim plugin manager setup
-    - `lsp.lua` - Language Server Protocol configuration
-    - `mason.lua` - LSP installer and manager
-    - `mason-lspconfig.lua` - Mason LSP configuration bridge
-    - `mason-tools.lua` - DAP and tool installations
-    - `cmp.lua` - Completion engine configuration
-    - `telescope.lua` - Fuzzy finder setup
-    - `treesitter.lua` - Syntax highlighting and parsing
-    - `neotree.lua` - File explorer configuration
-    - `lualine.lua` - Status line configuration
-    - `keymaps.lua` - Custom key bindings
-    - `none-ls.lua` - Null-ls (formatting and diagnostics)
-  - `plugins/` - Plugin specifications
-    - `init.lua` - Plugin list and specifications
 
 ---
 
