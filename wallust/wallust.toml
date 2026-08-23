@@ -47,5 +47,7 @@ palette = "dark"
 kitty = { template = "kitty", target = "~/.config/kitty/colors-kitty.conf", pywal = true }
 hyprland = { template = "hyprland", target = "~/.config/hypr/hyprland-border.lua" }
 rofi = { template = "rofi-window.rasi", target = "~/.config/rofi/rofi-window.rasi" }
+gtk-colors = { template = "gtk-colors.css", target = "~/.config/gtk-3.0/gtk-colors.css" }
+thunar = { template = "thunar.css", target = "~/.config/gtk-3.0/thunar.css" }
 quickshell = { template = "quickshell-theme.qml", target = "~/.config/quickshell/theme/Colors.qml", pywal = false }
 swaync = { template = "swaync.css", target = "~/.config/swaync/colors-wallust.css", pywal = false }

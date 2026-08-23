@@ -1,0 +1,8 @@
+@define-color theme_bg_color {{background}};
+@define-color theme_fg_color {{foreground}};
+@define-color theme_base_color {{color0}};
+@define-color theme_selected_bg_color {{color4}};
+@define-color theme_selected_fg_color {{background}};
+@define-color borders {{color8}};
+@define-color warning_color {{color3}};
+@define-color error_color {{color1}};

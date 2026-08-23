@@ -1,0 +1,157 @@
+/* Thunar theme */
+
+.thunar * {
+    outline: none;
+    border: none;
+}
+
+.thunar.background {
+    background: {{background}};
+}
+
+.thunar .titlebar {
+    background: inherit;
+}
+
+.thunar .titlebutton.close {
+    margin: 0 15px 0 0;
+}
+
+.thunar paned > separator {
+    min-width: 4px;
+    margin-right: -7px;
+    margin-left: -7px;
+    background: none;
+    background-image: none;
+    box-shadow: none;
+}
+
+.thunar .frame.standard-view {
+    padding: 10px;
+    margin: 10px 15px 0 0;
+    border-radius: 15px;
+    background-color: {{color0}};
+    animation: fading 400ms ease forwards;
+    opacity: 0;
+    animation-delay: 250ms;
+}
+
+.thunar .frame.standard-view .view:not(.rubberband),
+.thunar .frame.standard-view .view *:not(.rubberband) {
+    background-color: transparent;
+}
+
+.thunar .frame.standard-view .view *:selected {
+    color: {{foreground}};
+}
+
+.thunar .rubberband {
+    background-color: alpha({{color3}}, 0.15);
+    border: 1px solid alpha({{color3}}, 0.15);
+}
+
+.thunar header.top {
+    background: none;
+    padding: 0 10px 0 0;
+    margin: 3px 0 -3px -2px;
+}
+
+.thunar header.top tabs .reorderable-page {
+    margin: 0;
+    transition: all ease 300ms;
+}
+.thunar header.top tabs .reorderable-page + .reorderable-page {
+    margin: 0 0 0 10px;
+}
+
+.thunar header.top tabs .reorderable-page:hover {
+    background-color: alpha({{color3}}, 0.08);
+}
+.thunar header.top tabs .reorderable-page:checked {
+    color: {{color3}};
+    background-color: alpha({{color3}}, 0.15);
+}
+
+.thunar .sidebar {
+    padding: 0 20px;
+    background: none;
+    animation: fading 600ms ease forwards;
+    animation-delay: 100ms;
+    opacity: 0;
+}
+
+.thunar .sidebar .view {
+    padding: 8px 4px;
+    border-radius: 10px;
+    background: none;
+    transition: all ease 300ms;
+}
+
+.thunar .sidebar .view:hover {
+    background: alpha({{foreground}}, 0.1);
+}
+
+.thunar .sidebar .view:selected {
+    background: alpha({{foreground}}, 0.15);
+    color: {{foreground}};
+}
+
+.thunar .path-bar-button {
+    margin: 0;
+    padding: 8px 5px;
+    transition: all ease 0.4s;
+}
+
+.thunar .location-button.toggle:checked,
+.thunar .path-bar-button.toggle:checked {
+    padding: 8px 25px;
+    background: alpha({{color3}}, 0.15);
+    color: {{color3}};
+    box-shadow: none;
+}
+
+.thunar .location-button.path-bar-button:not(:checked) {
+    background-color: {{color0}};
+}
+
+.thunar .location-button.path-bar-button:not(:checked):hover {
+    background: alpha({{color3}}, 0.08);
+    color: alpha({{color3}}, 0.8);
+}
+
+.thunar .location-button.toggle+.location-button.toggle:checked {
+    margin-left: 0px;
+    padding: 0 25px;
+}
+
+.thunar .titlebar {
+    padding: 15px 0 5px 0;
+}
+
+.thunar button.toggle:checked {
+    color: {{color3}};
+}
+
+.thunar .image-button {
+    padding: 8px;
+    margin: 0 0 0 8px;
+    transition: all ease 0.4s;
+}
+
+.thunar statusbar {
+    background-color: {{color0}};
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin: 15px 5px 15px -10px;
+    color: {{foreground}};
+}
+
+.thunar box.vertical .image {
+    margin: 15px;
+}
+
+@keyframes fading {
+    to {
+        opacity: 1;
+    }
+}
