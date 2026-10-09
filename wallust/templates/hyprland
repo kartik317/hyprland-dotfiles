@@ -1,6 +1,6 @@
 hl.config({
     general = {
-        ["col.active_border"] = 0x{{color4 | strip}}ff,
-        ["col.inactive_border"] = 0x{{color0 | strip}}cc,
+        ["col.active_border"] = 0xff{{color6 | strip}},
+        ["col.inactive_border"] = 0xcc{{color0 | strip}},
     }
 })

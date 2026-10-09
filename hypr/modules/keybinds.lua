@@ -11,9 +11,8 @@ local menu        = "rofi -show drun"
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
-hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(terminal .. " --hold sh -c 'fastfetch'"))
-local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
--- closeWindowBind:set_enabled(false)
+hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(terminal .. " --hold sh -c 'fastfetch'"))
+hl.bind(mainMod .. " + C", hl.dsp.window.close())
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -21,25 +20,52 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
-hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(terminal .. " -e ~/.config/hypr/scripts/wallpaper-yazi.sh"))
-hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(terminal .. " -e ~/.config/hypr/scripts/live-wallpaper-yazi.sh"))
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("qs -p ~/Desktop/quickshell_configuration/quickshell/shell.qml ipc call wallpaper-switcher toggle"))
+hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd("qs ipc call live-wallpaper-switcher toggle"))
 hl.bind(mainMod .. " + Y", hl.dsp.exec_cmd(terminal .. " -e yazi"))
-hl.bind(mainMod .. "+ SHIFT + V", hl.dsp.exec_cmd("copyq toggle"))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("qs ipc call clipboard toggle"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("wofi-emoji | wofi-copy"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("qs ipc call lockscreen lock"))
+--hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("wofi-emoji | wofi-copy"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave"))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd("obsidian"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("blueman-manager"))
-hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("wlogout"))
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("kitty -e bluetui"))
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-cava-bg.sh"))
 hl.bind("CTRL + M", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-glava.sh"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("kitty -e nmtui"))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal .. " -e ./temps.sh"))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-quickshell.sh"))
 hl.bind(mainMod .. " + Tab", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-waybar.sh"))
+hl.bind(mainMod .. " + ALT + C", hl.dsp.exec_cmd("qs ipc call clock-widget toggle"))
+hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("qs ipc call brightness-controls toggle"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd("qs ipc call powermenu toggle"))
+hl.bind("ALT + C", hl.dsp.exec_cmd("hyprpicker"))
+hl.bind("CTRL + SHIFT + W", hl.dsp.exec_cmd("kitty --class weather -e linecast weather"))
+hl.bind("CTRL + SHIFT + M", hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle-cava-bg.sh"))
+
+-- Music controls
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("qs ipc call media playPause"))
+hl.bind(mainMod .. " + SHIFT + period", hl.dsp.exec_cmd("qs ipc call media next"))
+hl.bind(mainMod .. " + SHIFT + comma", hl.dsp.exec_cmd("qs ipc call media previous"))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("qs ipc call media loop"))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("qs ipc call media shuffle"))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("qs ipc call media changePlayer"))
+
+-- Apps shortcuts
+hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("qs ipc call appshortcuts off"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd("qs ipc call appshortcuts next"))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd("qs ipc call appshortcuts prev"))
+hl.bind(mainMod .. " + return", hl.dsp.exec_cmd("qs ipc call appshortcuts launch"))
+
+
+-- Voice assistant
+
+-- key-down: start recording
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("~/.config/hypr/assistant/start.sh"))
+-- key-up: stop recording
+hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("~/.config/hypr/assistant/stop.sh"), { release = true })
+
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
